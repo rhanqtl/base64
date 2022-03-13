@@ -3,10 +3,11 @@
 #include <string>
 #include <cassert>
 #include <functional>
+#include <cstdint>
 
 using namespace std;
 
-int read_input(int &ans);
+int read_input(uint32_t &ans);
 
 string encode_1byte(int cs);
 string encode_2bytes(int cs);
@@ -60,14 +61,14 @@ string encode_3bytes(int cs) {
     return ans;
 }
 
-int read_input(int &ans) {
+int read_input(uint32_t &ans) {
     ans = 0;
     char c;
     for (int i = 0; i < 3; i++) {
         if (!cin.get(c)) {
             return i;
         }
-        ans = (ans << 8) | static_cast<int>(c);
+        ans = (ans << 8) | static_cast<uint32_t>(c);
     }
     return 3;
 }
