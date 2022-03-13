@@ -2,15 +2,15 @@
 
 #include "base64.hpp"
 
-TEST(Base64EncodeTest, 1Byte) {
+TEST(Base64DecodeTest, 1Byte) {
 
 }
 
-TEST(Base64EncodeTest, 2Bytes) {
+TEST(Base64DecodeTest, 2Bytes) {
   
 }
 
-TEST(Base64EncodeTest, 3Bytes) {
+TEST(Base64DecodeTest, 3Bytes) {
   
 }
 
