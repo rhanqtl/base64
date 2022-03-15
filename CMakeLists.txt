@@ -12,6 +12,10 @@ SET(DECODE_LIB_NAME base64_decode_lib)
 SET(DECODE_TEST_NAME base64_decode_test)
 
 ADD_SUBDIRECTORY(src)
-ADD_SUBDIRECTORY(tests)
 
-ADD_SUBDIRECTORY(lib/googletest)
+OPTION(WITH_UNIT_TESTS "whether or not to build unit tests" OFF)
+
+IF (WITH_UNIT_TESTS)
+    ADD_SUBDIRECTORY(tests)
+    ADD_SUBDIRECTORY(lib/googletest)
+ENDIF ()
